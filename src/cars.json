@@ -1,0 +1,139 @@
+{
+  "cars": [
+    {
+      "make": "Alfa Romeo",
+      "model": "4c Spider",
+      "image": "assets/images/alfa-romeo-4c-spider/alfa-romeo-4c-spider.png",
+      "image@2x": "assets/images/alfa-romeo-4c-spider/alfa-romeo-4c-spider@2x.png",
+      "price_per_day": 825,
+      "logo": "assets/images/logos/alfa-romeo-logo.png",
+      "color": "yellow"
+    },
+    {
+      "make": "Bentely",
+      "model": "Continental",
+      "image": "assets/images/bentley-continental/bentley-continental.png",
+      "image@2x": "assets/images/bentley-continental/bentley-continental@2x.png",
+      "price_per_day": 825,
+      "logo": "assets/images/logos/bentley-logo.png",
+      "color": "blue"
+    },
+    {
+      "make": "Bmw",
+      "model": "M1 Competition",
+      "image": "assets/images/bmw-m1-competition/bmw-m1-competition.png",
+      "image@2x": "assets/images/bmw-m1-competition/bmw-m1-competition@2x.png",
+      "price_per_day": 825,
+      "logo": "assets/images/logos/bmw-logo.png",
+      "color": "white"
+    },
+    {
+      "make": "Bmw",
+      "model": "M4",
+      "image": "assets/images/bmw-m4/bmw-m4.png",
+      "image@2x": "assets/images/bmw-m4/bmw-m4@2x.png",
+      "price_per_day": 725,
+      "logo": "assets/images/logos/bmw-logo.png",
+      "color": "gray"
+    },
+    {
+      "make": "Bugatti",
+      "model": "Veyron Spyder",
+      "image": "assets/images/bugatti/bugatti.png",
+      "image@2x": "assets/images/bugatti/bugatti@2x.png",
+      "price_per_day": 925,
+      "logo": "assets/images/logos/bugatti-logo.png",
+      "color": "blue"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Corvette Z16",
+      "image": "assets/images/chevrolet-corvette-Z16-grand-sport-2dr/chevrolet-corvette-Z16-grand-sport-2dr.png",
+      "image@2x": "assets/images/chevrolet-corvette-Z16-grand-sport-2dr/chevrolet-corvette-Z16-grand-sport-2dr@2x.png",
+      "price_per_day": 925,
+      "logo": "assets/images/logos/chevrolet-logo.png",
+      "color": "white"
+    },
+    {
+      "make": "Ferrari",
+      "model": "458 Italia",
+      "image": "assets/images/ferrari-458-Italia/ferrari-458-Italia.png",
+      "image@2x": "assets/images/ferrari-458-Italia/ferrari-458-Italia@2x.png",
+      "price_per_day": 725,
+      "logo": "assets/images/logos/ferrari-logo.png",
+      "color": "red"
+    },
+    {
+      "make": "Ferrari",
+      "model": "California",
+      "image": "assets/images/ferrari-california/ferrari-california.png",
+      "image@2x": "assets/images/ferrari-california/ferrari-california@2x.png",
+      "price_per_day": 725,
+      "logo": "assets/images/logos/ferrari-logo.png",
+      "color": "red"
+    },
+    {
+      "make": "Lamborghini",
+      "model": "Aventador",
+      "image": "assets/images/lamborghini/lamborghini.png",
+      "image@2x": "assets/images/lamborghini/lamborghini@2x.png",
+      "price_per_day": 925,
+      "logo": "assets/images/logos/lamborghini-logo.png",
+      "color": "orange"
+    },
+    {
+      "make": "Mclaren",
+      "model": "570 S",
+      "image": "assets/images/mclaren-570s/mclaren-570s.png",
+      "image@2x": "assets/images/mclaren-570s/mclaren-570s@2x.png",
+      "price_per_day": 725,
+      "logo": "assets/images/logos/mclaren-logo.png",
+      "color": "orange"
+    },
+    {
+      "make": "Mclaren",
+      "model": "P1 Gtr",
+      "image": "assets/images/mclaren-p1-gtr/mclaren-p1-gtr.png",
+      "image@2x": "assets/images/mclaren-p1-gtr/mclaren-p1-gtr@2x.png",
+      "price_per_day": 925,
+      "logo": "assets/images/logos/mclaren-logo.png",
+      "color": "blue"
+    },
+    {
+      "make": "Mercedez Benz",
+      "model": "E Class Sedan",
+      "image": "assets/images/mercedez-benz-e-class-sedan/mercedez-benz-e-class-sedan.png",
+      "image@2x": "assets/images/mercedez-benz-e-class-sedan/mercedez-benz-e-class-sedan@2x.png",
+      "price_per_day": 925,
+      "logo": "assets/images/logos/mercedez-benz-logo.png",
+      "color": "gray"
+    },
+    {
+      "make": "Porshe",
+      "model": "911 Gt3",
+      "image": "assets/images/porsche-911-gt3/porsche-911-gt3.png",
+      "image@2x": "assets/images/porsche-911-gt3/porsche-911-gt3@2x.png",
+      "price_per_day": 825,
+      "logo": "assets/images/logos/porshe-logo.png",
+      "color": "gold"
+    },
+    {
+      "make": "Porshe",
+      "model": "Cayman",
+      "image": "assets/images/porsche-cayman/porsche-cayman.png",
+      "image@2x": "assets/images/porsche-cayman/porsche-cayman@2x.png",
+      "price_per_day": 825,
+      "logo": "assets/images/logos/porshe-logo.png",
+      "color": "white"
+    },
+    {
+      "make": "Rolls Royce",
+      "model": "Wraith",
+      "image": "assets/images/rolls-royce/rolls-royce.png",
+      "image@2x": "assets/images/rolls-royce/rolls-royce@2x.png",
+      "price_per_day": 725,
+      "logo": "assets/images/logos/rolls-royce-logo.png",
+      "color": "burgundy"
+    }
+  ]
+}

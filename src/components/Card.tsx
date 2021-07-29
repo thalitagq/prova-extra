@@ -1,11 +1,17 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
-import ferrari from "../assets/images/ferrari-california/ferrari-california.png";
 
 const hoverAnimation = keyframes`
   0% { opacity: 0 }
   50% { opacity: 0.5} 
   100% { opacity: 1}
+`;
+
+const hoverAnimationCar = keyframes`
+  0% { margin-left: -100% }
+  50% { margin-left: -50% }
+  100% { margin-left: 0%}
 `;
 
 const HoverMessage = styled.span`
@@ -14,6 +20,12 @@ const HoverMessage = styled.span`
   font-weight: bold;
   opacity: 0;
   align-self: flex-end;
+`;
+
+const CarImage = styled.img`
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const Container = styled.div`
@@ -25,8 +37,10 @@ const Container = styled.div`
   padding: 20px 15px;
   width: 290px;
   height: 225px;
-  flex: 1 0;
+  flex: "initial" 0;
   position: relative;
+  overflow: hidden;
+  cursor: pointer;
   &::after {
     content: "";
     background-image: linear-gradient(52deg, #a1a7f4, #e6d3f1);
@@ -47,6 +61,9 @@ const Container = styled.div`
     }
     ${HoverMessage} {
       animation: ${hoverAnimation} 0.3s ease forwards;
+    }
+    ${CarImage} {
+      animation: ${hoverAnimationCar} 0.4s linear forwards;
     }
   }
 `;
@@ -92,21 +109,44 @@ const Footer = styled.div`
   justify-content: space-between;
 `;
 
-export const Card = (): JSX.Element => {
+export type Car = {
+  make: string;
+  model: string;
+  image: string;
+  "image@2x": string;
+  price_per_day: number;
+  logo: string;
+  color: string;
+};
+
+type CardProps = {
+  car: Car;
+};
+
+export const Card = (props: CardProps): JSX.Element => {
+  const history = useHistory();
+
+  const onClickCardHandler = () => {
+    history.push({
+      pathname: `details/${props.car.make}/${props.car.model}`,
+      state: props.car ,
+    });
+  };
+
   return (
-    <Container>
+    <Container onClick={onClickCardHandler}>
       <div>
         <Title>
-          <strong>Ferrari</strong>
+          <strong>{props.car.make}</strong>
         </Title>
-        <Subtitle>CALIFORNIA</Subtitle>
+        <Subtitle>{props.car.model}</Subtitle>
       </div>
-      <img src={ferrari}></img>
+      <CarImage src={require("../" + props.car.image).default} />
       <Footer>
         <HoverMessage>Book Now</HoverMessage>
         <PriceWrapper>
           <PriceSymbol>$</PriceSymbol>
-          <PricePrimaryText>725</PricePrimaryText>
+          <PricePrimaryText>{props.car.price_per_day}</PricePrimaryText>
           <PriceSecondaryText>/day</PriceSecondaryText>
         </PriceWrapper>
       </Footer>
