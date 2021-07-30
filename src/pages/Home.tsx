@@ -3,13 +3,14 @@ import { Card } from "../components/Card";
 import data from "../cars.json";
 import styled from "styled-components";
 import { ReactComponent as ArrowUp } from "../assets/icons/arrow_up.svg";
+import { Car } from "../components/Card";
 
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  /* gap: 10px; */
   padding: 1rem;
   flex: 1;
 `;
@@ -32,10 +33,10 @@ const ScrollTopBUtton = styled.div`
 
 export const Home = (): JSX.Element => {
   const [isScrollButtonVisible, setIsScrollButtonVisible] = useState(false);
-  
+
   const scrollTopHandler = (): void => {
-     window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const checkScrollTop = () => {
     if (!isScrollButtonVisible && window.pageYOffset > 200) {
@@ -49,14 +50,30 @@ export const Home = (): JSX.Element => {
 
   return (
     <Container>
-      {data.cars.map((car) => (
-        <Card car={car} key={car.model} />
-      ))}
-      {isScrollButtonVisible &&
+      {data.cars.map((car, index, carsArray) => {
+        const previousAndNext = {previous: {} as Car, next: {} as Car }
+
+        Object.assign(
+          previousAndNext.previous,
+          carsArray[(index + carsArray.length - 1) % carsArray.length]
+        );
+        Object.assign(
+          previousAndNext.next,
+          carsArray[(index + 1) % carsArray.length]
+        );
+        return (
+          <Card
+            car={car}
+            key={car.model}
+            previousAndNextCar={previousAndNext}
+          />
+        );
+      })}
+      {isScrollButtonVisible && (
         <ScrollTopBUtton onClick={scrollTopHandler}>
           <ArrowUp />
         </ScrollTopBUtton>
-      }
+      )}
     </Container>
   );
 };

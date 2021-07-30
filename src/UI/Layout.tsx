@@ -5,7 +5,9 @@ import { Navbar } from "./Navbar";
 const InnerContainer = styled.div`
   padding: 1rem;
   background: linear-gradient(125deg, #ffffff, #d8d7d7);
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Layout = ({

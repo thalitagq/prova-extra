@@ -10,7 +10,7 @@ const hoverAnimation = keyframes`
 
 const hoverAnimationCar = keyframes`
   0% { margin-left: -100% }
-  50% { margin-left: -50% }
+  /* 50% { margin-left: -50% } */
   100% { margin-left: 0%}
 `;
 
@@ -23,7 +23,7 @@ const HoverMessage = styled.span`
 `;
 
 const CarImage = styled.img`
-  width: fit-content;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 `;
@@ -41,6 +41,7 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  margin: 10px;
   &::after {
     content: "";
     background-image: linear-gradient(52deg, #a1a7f4, #e6d3f1);
@@ -63,7 +64,7 @@ const Container = styled.div`
       animation: ${hoverAnimation} 0.3s ease forwards;
     }
     ${CarImage} {
-      animation: ${hoverAnimationCar} 0.4s linear forwards;
+      animation: ${hoverAnimationCar} 0.25s linear forwards;
     }
   }
 `;
@@ -121,6 +122,7 @@ export type Car = {
 
 type CardProps = {
   car: Car;
+  previousAndNextCar: {previous: Car, next: Car}
 };
 
 export const Card = (props: CardProps): JSX.Element => {
@@ -129,7 +131,7 @@ export const Card = (props: CardProps): JSX.Element => {
   const onClickCardHandler = () => {
     history.push({
       pathname: `details/${props.car.make}/${props.car.model}`,
-      state: props.car ,
+      state: {previous: props.previousAndNextCar.previous, current: props.car, next: props.previousAndNextCar.next },
     });
   };
 
