@@ -8,7 +8,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   height: 80px;
   padding: 0 20px;
   box-shadow: 0px 10px 30px #0000001a;
@@ -35,22 +35,28 @@ const TitleWrapper = styled.div`
 const MiddleContainer = styled.div`
   background-color: #f3f1fc;
   width: 500px;
-  height: 35px;
+  min-height: 35px;
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 20px;
+  flex-wrap: wrap;
+  padding: 10px 0 10px 20px;
+  @media (max-width: 860px) {
+    display: none;
+  }
 `;
 
 const MiddleContainerText = styled.p`
   color: #656469;
   font-size: 12px;
+
 `;
 
 const MiddleContainerTextIconWrapper = styled.div`
   display: flex;
   align-items: center;
+  align-self: center;
   svg {
     path {
       fill: #c4c4c4;
@@ -68,6 +74,7 @@ const SearchButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
   cursor: pointer;
 `;
 
@@ -103,25 +110,21 @@ export const Navbar = (): JSX.Element => {
           <MapPin style={{ marginRight: 5 }} />
           <MiddleContainerText>North Carolina, NC 90025</MiddleContainerText>
         </MiddleContainerTextIconWrapper>
-        <MiddleContainerTextIconWrapper>
-          <Calendar style={{ marginRight: 5 }} />
-          <MiddleContainerText>11/03/2021</MiddleContainerText>
-        </MiddleContainerTextIconWrapper>
-        <MiddleContainerTextIconWrapper>
-          <Calendar style={{ marginRight: 5 }} />
-          <MiddleContainerText>12/12/2021</MiddleContainerText>
-        </MiddleContainerTextIconWrapper>
+          <MiddleContainerTextIconWrapper style={{ marginRight: 10 }}>
+            <Calendar style={{ marginRight: 5 }} />
+            <MiddleContainerText>11/03/2021</MiddleContainerText>
+          </MiddleContainerTextIconWrapper>
+          <MiddleContainerTextIconWrapper>
+            <Calendar style={{ marginRight: 5 }} />
+            <MiddleContainerText>12/12/2021</MiddleContainerText>
+          </MiddleContainerTextIconWrapper>
         <SearchButton>
           <Search />
         </SearchButton>
       </MiddleContainer>
       <AuthButtonsContainer>
-        <AuthButton>
-          Sign up
-        </AuthButton> 
-        <AuthButton2>
-          Sign in
-        </AuthButton2>
+        <AuthButton>Sign up</AuthButton>
+        <AuthButton2>Sign in</AuthButton2>
       </AuthButtonsContainer>
     </Container>
   );

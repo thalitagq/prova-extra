@@ -58,8 +58,9 @@ const LogoTextWrapper = styled.div`
 const MainWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap-reverse;
   @media (max-width: 650px) {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin: 20px;
   }
 `;
@@ -78,32 +79,30 @@ const BackButton = styled.button`
   padding: 0 20px;
   box-shadow: 0px 5px 20px #0000001a;
   cursor: pointer;
+  margin-bottom: 10px;
 `;
 
 const BookButton = styled(BackButton)`
   color: #fff;
   background-color: #313136;
+  margin-bottom: 10px;
 `;
 
 const BottomContaier = styled.div`
-  /* display: flex; */
-
-  display: grid;
-  flex-wrap: wrap;
+  display: flex;
+  flex: 1;
   align-items: center;
-  /* justify-content: space-evenly; */
-  /* flex: 1; */
-  /* width: 100% */
-  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  @media (max-width: 400px) {
+    justify-content: center;
+    flex-direction: column;
+  }
 `;
 
 const NextCarWrapper = styled.div`
-  /* display: flex;
+  display: flex;
   align-items: center;
-  justify-content: space-evenly; */
-  display: grid;
-  grid-template-columns: auto auto auto;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
   @media (max-width: 770px) {
     justify-content: center;
     flex-direction: column;
@@ -122,10 +121,11 @@ const NextCarItem = styled.div`
   display: flex;
   justify-content: right;
   align-items: center;
-  padding-left: 5px;
-  @media (max-width: 770px) {
+  padding: 5px;
+  margin: 10px;
+  /* @media (max-width: 770px) {
     margin: 10px;
-  }
+  } */
 `;
 
 const PreviousCarItem = styled(NextCarItem)``;
@@ -142,9 +142,7 @@ const NextButton = styled(BookButton)`
   padding: 0;
   cursor: pointer;
   justify-self: center;
-  @media (max-width: 770px) {
-    margin: 20px;
-  }
+  flex-shrink: 0;
 `;
 
 type DetailsCar = {
@@ -221,7 +219,7 @@ export const Details = (): JSX.Element => {
             src={require("../" + carsList.current.car["image@2x"]).default}
             layout
           />
-          <BookButton style={{ margin: "auto" }}>
+          <BookButton style={{ margin: "auto", marginBottom: 10 }}>
             Book now
             <VscArrowRight size={20} style={{ marginLeft: 10 }} />
           </BookButton>
@@ -240,19 +238,21 @@ export const Details = (): JSX.Element => {
           <PreviousCarItem>
             <motion.img
               src={require("../" + carsList.previous.car.image).default}
+              style={{ width: "100%" }}
               layout
             />
           </PreviousCarItem>
           <CurrentCarItem>
             <motion.img
               src={require("../" + carsList.current.car["image@2x"]).default}
-              style={{ width: "130%" }}
+              style={{ width: "100%" }}
               layout
             />
           </CurrentCarItem>
           <NextCarItem>
             <motion.img
               src={require("../" + carsList.next.car.image).default}
+              style={{ width: "100%" }}
               layout
             />
           </NextCarItem>

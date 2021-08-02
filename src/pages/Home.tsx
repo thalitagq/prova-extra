@@ -26,8 +26,8 @@ const ScrollTopBUtton = styled.div`
   border-radius: 50px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   position: fixed;
-  bottom: 100px;
-  right: 100px;
+  bottom: 10%;
+  right: 10%;
   cursor: pointer;
 `;
 
