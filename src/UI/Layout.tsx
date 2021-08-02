@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, ReactNode } from "react";
 import styled from "styled-components";
-import { Navbar } from "./Navbar";
+import { Navbar } from "./Navbar/index";
 
 const InnerContainer = styled.div`
   padding: 1rem;

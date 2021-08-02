@@ -1,7 +1,7 @@
 import { AnimateSharedLayout } from 'framer-motion';
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Details } from './pages/Details';
+import { Details } from './pages/Details/index';
 import { Home } from './pages/Home';
 import { Layout } from './UI/Layout';
 
