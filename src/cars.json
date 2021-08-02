@@ -7,7 +7,11 @@
       "image@2x": "assets/images/alfa-romeo-4c-spider/alfa-romeo-4c-spider@2x.png",
       "price_per_day": 825,
       "logo": "assets/images/logos/alfa-romeo-logo.png",
-      "color": "yellow"
+      "color": "yellow",
+      "previous_image": "assets/images/alfa-romeo-4c-spider/alfa-romeo-4c-spider-previous.png",
+      "previous_color": "white",
+      "next_image":"assets/images/alfa-romeo-4c-spider/alfa-romeo-4c-spider-next.png",
+      "next_color":"black"   
     },
     {
       "make": "Bentely",
@@ -16,7 +20,11 @@
       "image@2x": "assets/images/bentley-continental/bentley-continental@2x.png",
       "price_per_day": 825,
       "logo": "assets/images/logos/bentley-logo.png",
-      "color": "blue"
+      "color": "blue",
+      "previous_image": "assets/images/bentley-continental/bentley-continental-previous.png",
+      "previous_color": "white",
+      "next_image": "assets/images/bentley-continental/bentley-continental-next.png",
+      "next_color": "gray"
     },
     {
       "make": "Bmw",
@@ -25,7 +33,11 @@
       "image@2x": "assets/images/bmw-m1-competition/bmw-m1-competition@2x.png",
       "price_per_day": 825,
       "logo": "assets/images/logos/bmw-logo.png",
-      "color": "white"
+      "color": "white",
+      "previous_image": "assets/images/bmw-m1-competition/bmw-m1-competition-previous.png",
+      "previous_color": "blue",
+      "next_image": "assets/images/bmw-m1-competition/bmw-m1-competition-next.png",
+      "next_color": "red"
     },
     {
       "make": "Bmw",
@@ -34,7 +46,11 @@
       "image@2x": "assets/images/bmw-m4/bmw-m4@2x.png",
       "price_per_day": 725,
       "logo": "assets/images/logos/bmw-logo.png",
-      "color": "gray"
+      "color": "gray",
+      "previous_image": "assets/images/bmw-m4/bmw-m4-previous.png",
+      "previous_color": "yellow",
+      "next_image": "assets/images/bmw-m4/bmw-m4-next.png",
+      "next_color": "white"
     },
     {
       "make": "Bugatti",
@@ -43,7 +59,11 @@
       "image@2x": "assets/images/bugatti/bugatti@2x.png",
       "price_per_day": 925,
       "logo": "assets/images/logos/bugatti-logo.png",
-      "color": "blue"
+      "color": "blue",
+      "previous_image": "assets/images/bugatti/bugatti-previous.png",
+      "previous_color": "black",
+      "next_image": "assets/images/bugatti/bugatti-next.png",
+      "next_color": "gray"
     },
     {
       "make": "Chevrolet",
@@ -52,7 +72,11 @@
       "image@2x": "assets/images/chevrolet-corvette-Z16-grand-sport-2dr/chevrolet-corvette-Z16-grand-sport-2dr@2x.png",
       "price_per_day": 925,
       "logo": "assets/images/logos/chevrolet-logo.png",
-      "color": "white"
+      "color": "white",
+      "previous_image": "assets/images/hevrolet-corvette-Z16-grand-sport-2dr/chevrolet-corvette-Z16-grand-sport-2dr-previous.png",
+      "previous_color": "gray",
+      "next_image": "assets/images/hevrolet-corvette-Z16-grand-sport-2dr/chevrolet-corvette-Z16-grand-sport-2dr-next.png",
+      "next_color": "blue"
     },
     {
       "make": "Ferrari",
@@ -61,7 +85,11 @@
       "image@2x": "assets/images/ferrari-458-Italia/ferrari-458-Italia@2x.png",
       "price_per_day": 725,
       "logo": "assets/images/logos/ferrari-logo.png",
-      "color": "red"
+      "color": "red",
+      "previous_image": "assets/images/ferrari-458-Italia/ferrari-458-Italia-previous.png",
+      "previous_color": "white",
+      "next_image": "assets/images/ferrari-458-Italia/ferrari-458-Italia-next.png",
+      "next_color": "black"
     },
     {
       "make": "Ferrari",
@@ -70,7 +98,11 @@
       "image@2x": "assets/images/ferrari-california/ferrari-california@2x.png",
       "price_per_day": 725,
       "logo": "assets/images/logos/ferrari-logo.png",
-      "color": "red"
+      "color": "red",
+      "previous_image": "assets/images/ferrari-california/ferrari-california-previous.png",
+      "previous_color": "blue",
+      "next_image": "assets/images/ferrari-california/ferrari-california-next.png",
+      "next_color": "white"
     },
     {
       "make": "Lamborghini",
@@ -79,7 +111,11 @@
       "image@2x": "assets/images/lamborghini/lamborghini@2x.png",
       "price_per_day": 925,
       "logo": "assets/images/logos/lamborghini-logo.png",
-      "color": "orange"
+      "color": "orange",
+      "previous_image": "assets/images/lamborghini/lamborghini-previous.png",
+      "previous_color": "white",
+      "next_image": "assets/images/lamborghini/lamborghini-next.png",
+      "next_color": "blue"
     },
     {
       "make": "Mclaren",
@@ -88,7 +124,11 @@
       "image@2x": "assets/images/mclaren-570s/mclaren-570s@2x.png",
       "price_per_day": 725,
       "logo": "assets/images/logos/mclaren-logo.png",
-      "color": "orange"
+      "color": "orange",
+      "previous_image": "assets/images/mclaren-570s/mclaren-570s-previous.png",
+      "previous_color": "blue",
+      "next_image": "assets/images/mclaren-570s/mclaren-570s-next.png",
+      "next_color": "white"
     },
     {
       "make": "Mclaren",
@@ -97,7 +137,11 @@
       "image@2x": "assets/images/mclaren-p1-gtr/mclaren-p1-gtr@2x.png",
       "price_per_day": 925,
       "logo": "assets/images/logos/mclaren-logo.png",
-      "color": "blue"
+      "color": "blue",
+      "previous_image": "assets/images/mclaren-p1-gtr/mclaren-p1-gtr-previous.png",
+      "previous_color": "gray",
+      "next_image": "assets/images/mclaren-p1-gtr/mclaren-p1-gtr-next.png",
+      "next_color": "white"
     },
     {
       "make": "Mercedez Benz",
@@ -106,7 +150,11 @@
       "image@2x": "assets/images/mercedez-benz-e-class-sedan/mercedez-benz-e-class-sedan@2x.png",
       "price_per_day": 925,
       "logo": "assets/images/logos/mercedez-benz-logo.png",
-      "color": "gray"
+      "color": "gray",
+      "previous_image": "assets/images/mercedez-benz-e-class-sedan/mercedez-benz-e-class-sedan-previous.png",
+      "previous_color": "blue",
+      "next_image": "assets/images/mercedez-benz-e-class-sedan/mercedez-benz-e-class-sedan-next.png",
+      "next_color": "black"
     },
     {
       "make": "Porshe",
@@ -115,7 +163,11 @@
       "image@2x": "assets/images/porsche-911-gt3/porsche-911-gt3@2x.png",
       "price_per_day": 825,
       "logo": "assets/images/logos/porshe-logo.png",
-      "color": "gold"
+      "color": "gold",
+      "previous_image": "assets/images/porsche-911-gt3/porsche-911-gt3-previous.png",
+      "previous_color": "red",
+      "next_image": "assets/images/porsche-911-gt3/porsche-911-gt3-next.png",
+      "next_color": "blue"
     },
     {
       "make": "Porshe",
@@ -124,7 +176,11 @@
       "image@2x": "assets/images/porsche-cayman/porsche-cayman@2x.png",
       "price_per_day": 825,
       "logo": "assets/images/logos/porshe-logo.png",
-      "color": "white"
+      "color": "white",
+      "previous_image": "assets/images/porsche-cayman/porsche-cayman-previous.png",
+      "previous_color": "yellow",
+      "next_image": "assets/images/porsche-cayman/porsche-cayman-next.png",
+      "next_color": "blue"
     },
     {
       "make": "Rolls Royce",
@@ -133,7 +189,11 @@
       "image@2x": "assets/images/rolls-royce/rolls-royce@2x.png",
       "price_per_day": 725,
       "logo": "assets/images/logos/rolls-royce-logo.png",
-      "color": "burgundy"
+      "color": "burgundy",
+      "previous_image": "assets/images/rolls-royce/rolls-royce-previous.png",
+      "previous_color": "blue",
+      "next_image": "assets/images/rolls-royce/rolls-royce-next.png",
+      "next_color": "white"
     }
   ]
 }

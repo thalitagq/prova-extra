@@ -10,7 +10,6 @@ const Container = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* gap: 10px; */
   padding: 1rem;
   flex: 1;
 `;
@@ -65,7 +64,6 @@ export const Home = (): JSX.Element => {
           <Card
             car={car}
             key={car.model}
-            previousAndNextCar={previousAndNext}
           />
         );
       })}

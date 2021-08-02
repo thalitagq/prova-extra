@@ -118,11 +118,14 @@ export type Car = {
   price_per_day: number;
   logo: string;
   color: string;
+  previous_image: string;
+  previous_color: string;
+  next_image: string;
+  next_color: string;
 };
 
 type CardProps = {
   car: Car;
-  previousAndNextCar: {previous: Car, next: Car}
 };
 
 export const Card = (props: CardProps): JSX.Element => {
@@ -131,7 +134,7 @@ export const Card = (props: CardProps): JSX.Element => {
   const onClickCardHandler = () => {
     history.push({
       pathname: `details/${props.car.make}/${props.car.model}`,
-      state: {previous: props.previousAndNextCar.previous, current: props.car, next: props.previousAndNextCar.next },
+      state: props.car,
     });
   };
 

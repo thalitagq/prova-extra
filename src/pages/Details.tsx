@@ -146,7 +146,8 @@ const NextButton = styled(BookButton)`
 `;
 
 type DetailsCar = {
-  car: Car;
+  image: string;
+  color: string;
   number: number;
 };
 
@@ -157,16 +158,25 @@ type DetailsProps = {
 };
 
 export const Details = (): JSX.Element => {
-  const { state } = useLocation<{ previous: Car; current: Car; next: Car }>();
+  const { state } = useLocation<Car>();
   const history = useHistory();
-  const [carsList, setCarsList] = useState<DetailsProps>({
-    previous: { car: state.previous, number: 3 },
-    current: { car: state.current, number: 1 },
-    next: { car: state.next, number: 2 },
+  // const [currentImage, setCurrentImage] = useState(state.image)
+  const [imagesList, setImagesList] = useState<DetailsProps>({
+    previous: {
+      image: state.previous_image,
+      color: state.previous_color,
+      number: 3,
+    },
+    current: {
+      image: state["image@2x"],
+      color: state.color,
+      number: 1,
+    },
+    next: { image: state.next_image, color: state.next_color, number: 2 },
   });
 
   const nextCarHandler = () => {
-    setCarsList((previousState) => {
+    setImagesList((previousState) => {
       const rearrangedList = {
         previous: {} as DetailsCar,
         current: {} as DetailsCar,
@@ -180,7 +190,7 @@ export const Details = (): JSX.Element => {
   };
 
   const previousCarHandler = () => {
-    setCarsList((previousState) => {
+    setImagesList((previousState) => {
       const rearrangedList = {
         previous: {} as DetailsCar,
         current: {} as DetailsCar,
@@ -196,14 +206,12 @@ export const Details = (): JSX.Element => {
   return (
     <>
       <LogoTextWrapper>
-        <ImageLogo src={require("../" + carsList.current.car.logo).default} />
+        <ImageLogo src={require("../" + state.logo).default} />
         <div>
           <PrimaryText>
-            {carsList.current.car.make} {carsList.current.car.model}
+            {state.make} {state.model}
           </PrimaryText>
-          <SecondaryText>
-            ${carsList.current.car.price_per_day}/day
-          </SecondaryText>
+          <SecondaryText>${state.price_per_day}/day</SecondaryText>
         </div>
       </LogoTextWrapper>
       <MainWrapper>
@@ -216,7 +224,7 @@ export const Details = (): JSX.Element => {
         </BackButton>
         <div>
           <MainImageCar
-            src={require("../" + carsList.current.car["image@2x"]).default}
+            src={require("../" + imagesList.current.image).default}
             layout
           />
           <BookButton style={{ margin: "auto", marginBottom: 10 }}>
@@ -225,8 +233,8 @@ export const Details = (): JSX.Element => {
           </BookButton>
         </div>
         <div style={{ width: 180, textAlign: "center" }}>
-          <PrimaryText>{carsList.current.number}</PrimaryText>
-          <ColorText>{carsList.current.car.color}</ColorText>
+          <PrimaryText>{imagesList.current.number}</PrimaryText>
+          <ColorText>{imagesList.current.color}</ColorText>
         </div>
       </MainWrapper>
 
@@ -237,21 +245,21 @@ export const Details = (): JSX.Element => {
         <NextCarWrapper>
           <PreviousCarItem>
             <motion.img
-              src={require("../" + carsList.previous.car.image).default}
+              src={require("../" + imagesList.previous.image).default}
               style={{ width: "100%" }}
               layout
             />
           </PreviousCarItem>
           <CurrentCarItem>
             <motion.img
-              src={require("../" + carsList.current.car["image@2x"]).default}
+              src={require("../" + imagesList.current.image).default}
               style={{ width: "100%" }}
               layout
             />
           </CurrentCarItem>
           <NextCarItem>
             <motion.img
-              src={require("../" + carsList.next.car.image).default}
+              src={require("../" + imagesList.next.image).default}
               style={{ width: "100%" }}
               layout
             />
